@@ -1,0 +1,44 @@
+###
+
+POST http://localhost:3000/api/v1/clinics/clinic HTTP/1.1
+Content-Type: application/json
+
+{
+  "clinic_name": "Peludos",
+  "nit": "836474r",
+  "address": {
+    "geo": ["928374", "0283474"],
+    "city": "Manizales",
+    "code_zip": "20004"
+
+  },
+  "pet_name": "Isabella",
+  "breed": "pincher",
+  "sex_pet": "Femenine",
+  "medical_history": {
+    "vaccines": {
+      "type_vaccine":"rabia",
+      "date_vaccine":"febrero"
+    },
+    "deworming": ["acaros", "pulgas", "garrapatas", "parasitos"]
+  }
+}
+
+###
+GET http://localhost:3000/api/v1/clinics HTTP/1.1
+
+
+###
+GET http://localhost:3000/api/v1/clinics/62633c5a77a5af1cce4fa1e4 HTTP/1.1
+
+
+###
+PUT http://localhost:3000/api/v1/clinics/62633c5a77a5af1cce4fa1e4 HTTP/1.1
+Content-Type: application/json
+
+{
+  "clinic_name": "Sabuesos"
+}
+
+###
+DELETE http://localhost:3000/api/v1/clinics/62633eb8ea1cbed880f593e2 HTTP/1.1
